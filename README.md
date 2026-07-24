@@ -4,7 +4,7 @@ A fully responsive e-commerce product page with a working shopping cart, search/
 
 **Live site:** [snap-cart-beryl.vercel.app](https://snap-cart-beryl.vercel.app)
 
-![SnapCart Screenshot](https://snap-cart-beryl.vercel.app/images/headphones.jpg)
+
 
 ## Features
 
