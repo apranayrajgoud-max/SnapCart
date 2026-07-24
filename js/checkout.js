@@ -1,4 +1,5 @@
 // ---------- DOM References ----------
+import { cart, loadCart, getCartTotal, clearCart } from "./cart.js";
 const checkoutItemsContainer = document.getElementById('checkout-items');
 const checkoutSubtotalEl = document.getElementById('checkout-subtotal');
 const checkoutTotalEl = document.getElementById('checkout-total');
@@ -42,7 +43,7 @@ function renderCheckout() {
 placeOrderBtn.addEventListener('click', () => {
   if (cart.length === 0) return;
 
-  const orderId = 'SE-' + Math.floor(100000 + Math.random() * 900000);
+  const orderId = 'SC-' + Math.floor(100000 + Math.random() * 900000);
   orderIdEl.textContent = `Order ID: ${orderId}`;
 
   clearCart();

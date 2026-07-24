@@ -51,6 +51,12 @@ body {
   text-shadow: 0 0 12px rgba(0, 240, 255, 0.6);
 }
 
+.header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
 .cart-toggle-btn {
   background: transparent;
   color: var(--cyan);
@@ -69,6 +75,26 @@ body {
   background: var(--cyan);
   color: var(--bg-deep);
   box-shadow: 0 0 18px rgba(0, 240, 255, 0.7);
+}
+
+.logout-btn {
+  background: transparent;
+  color: var(--violet);
+  border: 1px solid var(--violet);
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: var(--violet);
+  color: var(--bg-deep);
+  box-shadow: 0 0 14px rgba(176, 38, 255, 0.6);
 }
 
 /* ---------- Search & Filter Bar ---------- */
@@ -507,6 +533,83 @@ body {
   display: inline-block;
 }
 
+/* ---------- Auth Page (Login/Signup) ---------- */
+.auth-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  padding: 24px;
+}
+
+.auth-box {
+  background: var(--bg-panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  padding: 32px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.1);
+}
+
+.auth-tabs {
+  display: flex;
+  margin-bottom: 24px;
+  border: 1px solid var(--panel-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth-tab.active {
+  background: var(--cyan);
+  color: var(--bg-deep);
+}
+
+#auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#auth-form input {
+  padding: 12px 14px;
+  border: 1px solid var(--panel-border);
+  border-radius: 4px;
+  background: rgba(0, 240, 255, 0.04);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+#auth-form input::placeholder {
+  color: var(--text-dim);
+}
+
+#auth-form input:focus {
+  outline: none;
+  border-color: var(--cyan);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.35);
+}
+
+.auth-error {
+  color: #ff4d6d;
+  font-size: 0.85rem;
+  min-height: 1.2em;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .main-layout {
@@ -531,5 +634,15 @@ body {
 
   .checkout-layout {
     margin: 20px auto;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .cart-toggle-btn,
+  .logout-btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
   }
 }

@@ -1,3 +1,24 @@
+import { auth } from "./firebase-config.js";
+import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import { products } from "./products.js";
+import {
+  cart,
+  loadCart,
+  addToCart,
+  increaseQuantity,
+  decreaseQuantity,
+  removeFromCart,
+  getCartCount,
+  getCartTotal
+} from "./cart.js";
+
+// ---------- Auth Guard ----------
+onAuthStateChanged(auth, (user) => {
+  if (!user) {
+    window.location.href = 'login.html';
+  }
+});
+
 // ---------- DOM References ----------
 const productGrid = document.getElementById('product-grid');
 const cartSidebar = document.getElementById('cart-sidebar');
@@ -10,6 +31,14 @@ const searchInput = document.getElementById('search-input');
 const categoryFilter = document.getElementById('category-filter');
 const checkoutBtn = document.getElementById('checkout-btn');
 const cartOverlay = document.getElementById('cart-overlay');
+const logoutBtn = document.getElementById('logout-btn');
+
+// ---------- Logout ----------
+logoutBtn.addEventListener('click', () => {
+  signOut(auth).then(() => {
+    window.location.href = 'login.html';
+  });
+});
 
 // ---------- Render Products ----------
 function renderProducts(productList) {

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnapCart - Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="logo">SnapCart</h1>
+  </header>
+
+  <main class="auth-layout">
+    <div class="auth-box">
+      <div class="auth-tabs">
+        <button id="login-tab" class="auth-tab active">Login</button>
+        <button id="signup-tab" class="auth-tab">Sign Up</button>
+      </div>
+
+      <form id="auth-form">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <p id="auth-error" class="auth-error"></p>
+        <button type="submit" id="auth-submit-btn" class="checkout-btn">Login</button>
+      </form>
+    </div>
+  </main>
+
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>

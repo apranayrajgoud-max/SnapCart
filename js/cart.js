@@ -1,9 +1,11 @@
+import { products } from "./products.js";
+
 // ---------- Cart State ----------
 let cart = [];
 
 // ---------- Load cart from localStorage ----------
 function loadCart() {
-  const savedCart = localStorage.getItem('SnapCart-cart');
+  const savedCart = localStorage.getItem('snapcart-cart');
   if (savedCart) {
     cart = JSON.parse(savedCart);
   }
@@ -11,7 +13,7 @@ function loadCart() {
 
 // ---------- Save cart to localStorage ----------
 function saveCart() {
-  localStorage.setItem('SnapCart-cart', JSON.stringify(cart));
+  localStorage.setItem('snapcart-cart', JSON.stringify(cart));
 }
 
 // ---------- Add a product to the cart ----------
@@ -79,3 +81,16 @@ function getCartCount() {
 function getCartTotal() {
   return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
 }
+
+export {
+  cart,
+  loadCart,
+  saveCart,
+  addToCart,
+  increaseQuantity,
+  decreaseQuantity,
+  removeFromCart,
+  clearCart,
+  getCartCount,
+  getCartTotal
+};

@@ -10,3 +10,5 @@ const products = [
   { id: 9, name: "Comet Sneakers", price: 2299, category: "Footwear", image: "images/sneakers2.jpg" },
   { id: 10, name: "Vero Forza Gaming Laptop Sleeve", price: 799, category: "Accessories", image: "images/laptopsleeve.jpg" }
 ];
+
+export { products };
