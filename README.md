@@ -23,4 +23,8 @@ A fully responsive e-commerce product page with a working shopping cart, search/
 - **Storage:** Browser `localStorage` for cart persistence
 - **Hosting:** Vercel
 
+<<<<<<< HEAD
 ## Project Structure
+=======
+## Project Structure
+>>>>>>> 67fbaef129ab05914a6dc4fa81a333c2f89daf82
