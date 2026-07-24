@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnapCart - Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="logo">SnapCart</h1>
+    <a href="index.html" class="cart-toggle-btn" style="text-decoration:none; display:inline-block;">← Back to Shop</a>
+  </header>
+
+  <main class="checkout-layout">
+    <div id="order-view">
+      <h2 class="checkout-title">Order Summary</h2>
+      <div id="checkout-items" class="checkout-items">
+        <!-- Order items inserted here by JavaScript -->
+      </div>
+      <div class="checkout-summary-box">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="checkout-subtotal">₹0</span>
+        </div>
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span>Free</span>
+        </div>
+        <div class="summary-row summary-total">
+          <span>Total</span>
+          <span id="checkout-total">₹0</span>
+        </div>
+        <button id="place-order-btn" class="checkout-btn">Place Order</button>
+      </div>
+    </div>
+
+    <div id="confirmation-view" class="confirmation-view" style="display:none;">
+      <div class="confirm-icon">✓</div>
+      <h2 class="checkout-title">Order Confirmed</h2>
+      <p class="confirm-text">Your order has been placed successfully. This is a demo checkout — no real payment was processed.</p>
+      <p class="confirm-order-id" id="order-id"></p>
+      <a href="index.html" class="checkout-btn confirm-return-btn">Continue Shopping</a>
+    </div>
+  </main>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>
