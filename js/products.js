@@ -1,5 +1,5 @@
 const products = [
-  { id: 1, name: "HyperX Wireless BT Headphones", price: 2499, category: "Electronics", image: "https://placehold.co/300x300/0d1224/00f0ff?text=Headphones" },
+  { id: 1, name: "HyperX Wireless BT Headphones", price: 2499, category: "Electronics", image: "images/headphones.jpg" },
   { id: 2, name: "Apple Watch 3", price: 3999, category: "Electronics", image: "https://placehold.co/300x300/0d1224/00f0ff?text=Smart+Watch" },
   { id: 3, name: "Nike Air Jordans", price: 1899, category: "Footwear", image: "https://placehold.co/300x300/0d1224/00f0ff?text=Sneakers" },
   { id: 4, name: "American Tourister Backpack", price: 1299, category: "Accessories", image: "https://placehold.co/300x300/0d1224/00f0ff?text=Backpack" },
